@@ -32,6 +32,8 @@ func main() {
 
 	e := echo.New()
 
+	e.Use(echomiddleware.CORS())
+
 	// Log all requests
 	e.Use(echomiddleware.Logger())
 
